@@ -7,6 +7,13 @@ public class Enemy : MonoBehaviour
     public int health;
     public GameObject death;
     public Animator anim;
+    private AudioSource dead;
+    private GameObject deadHolder;
+    private void Start()
+    {
+        deadHolder = GameObject.Find("dieSound");
+        dead = deadHolder.GetComponent<AudioSource>();
+    }
 
     public void TakeDamage(int damage)
     {
@@ -16,6 +23,7 @@ public class Enemy : MonoBehaviour
         if(health <= 0)
         {
             Die();
+            dead.Play();
         }
     }
 
