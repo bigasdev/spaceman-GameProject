@@ -5,7 +5,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public static int totalScore;
-    public static int lives = 3;
+    public static int lives = 1;
     private void Update()
     {
         if(totalScore >= 5000)

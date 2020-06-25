@@ -5,6 +5,13 @@ using UnityEngine;
 public class HUD : MonoBehaviour
 {
     public GameObject smg;
+    public GameObject[] life;
+    public static int lifeCounter;
+
+    private void Start()
+    {
+        life[0].SetActive(true);
+    }
 
     private void Update()
     {
@@ -16,5 +23,8 @@ public class HUD : MonoBehaviour
         {
             smg.SetActive(false);
         }
+        
+        life[lifeCounter].SetActive(true);
+
     }
 }
