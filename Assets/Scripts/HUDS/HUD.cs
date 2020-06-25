@@ -24,7 +24,9 @@ public class HUD : MonoBehaviour
             smg.SetActive(false);
         }
         
+        
         life[lifeCounter].SetActive(true);
+
 
     }
 }

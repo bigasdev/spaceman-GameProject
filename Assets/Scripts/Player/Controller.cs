@@ -124,4 +124,11 @@ public class Controller : MonoBehaviour
         Gizmos.DrawLine(BodyPos.position + colliderOffset, BodyPos.position + colliderOffset + Vector3.down * groundLength);
         Gizmos.DrawLine(BodyPos.position - colliderOffset, BodyPos.position - colliderOffset + Vector3.down * groundLength);
     }
+
+    public void Die()
+    {
+        Score.lives -= 1;
+        HUD.lifeCounter -= 1;
+        Destroy(gameObject);
+    }
 }
